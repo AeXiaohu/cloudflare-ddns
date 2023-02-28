@@ -2,7 +2,6 @@
 
 [![source](https://img.shields.io/badge/source-github-blue)](https://github.com/AeXiaohu/cloudflare-ddns)
 ![test](https://img.shields.io/badge/test-passing-brightgreen)
-![test](https://img.shields.io/badge/test-passing-brightgreen)
 ![node](https://img.shields.io/badge/node-%3E%3D%2014.0.0-brightgreen)
 ![npm](https://img.shields.io/badge/npm-v8.11.0-blue)
 ![docs](https://img.shields.io/badge/docs-passing-brightgreen)
