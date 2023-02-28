@@ -1,5 +1,7 @@
 # cloudflare-ddns
 
+[![source](https://img.shields.io/badge/source-github-blue)](https://github.com/AeXiaohu/cloudflare-ddns)
+![test](https://img.shields.io/badge/test-passing-brightgreen)
 ![test](https://img.shields.io/badge/test-passing-brightgreen)
 ![node](https://img.shields.io/badge/node-%3E%3D%2014.0.0-brightgreen)
 ![npm](https://img.shields.io/badge/npm-v8.11.0-blue)
@@ -13,6 +15,15 @@
 2. 在 `index.js` 文件中执行 `startDDNS` 方法内的参数修改为你 Cloudflare 上的内容，具体参数说明在方法注释上：  
     
     ```javascript
+    startDDNS({
+        authorization: 'Bearer XXXXXXXXXXX_XXXXXXXXXXXXXXXXXXXXXXXX-XX',
+        rootDomain: 'xxx.com',
+        recordDomain: ['xxx.xxx.com'],
+        recordType: 'A',
+        ttl: 600,
+        proxied: false,
+    });
+
     /**
      * 执行DDNS
      * 修改配置中的DNS记录解析到当前Ip
@@ -28,10 +39,10 @@
     async function startDDNS(config)
     ```
 
-    其中 `authorization` API令牌需在 <https://dash.cloudflare.com/profile/api-tokens> 创建，权限选择	`区域.DNS.编辑`
+    其中 `authorization` API令牌需在 <https://dash.cloudflare.com/profile/api-tokens> 创建，权限选择 `区域.DNS.编辑`
 3. 参数配置好了后保存，运行 `npm run start`，或者直接点击根目录的 `start.bat`
 
 ## 关于
 方便使用 Cloudflare 解析域名，且是动态IP的用户，可部署在服务器定时运行。  
 
-Cloudflare API：https://api.cloudflare.com
+Cloudflare API：<https://api.cloudflare.com>
